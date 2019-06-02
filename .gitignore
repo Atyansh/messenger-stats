@@ -1,3 +1,17 @@
+# Project Specific
+audio/
+files/
+gifs/
+photos/
+videos/
+
+
+*.json
+.*.swp
+
+
+################################################################################
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
