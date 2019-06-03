@@ -3,6 +3,11 @@ FILENAME = 'message_1.json'
 PRINT_STATS = True
 GENERATE_WORDCLOUD = False
 
+# wordcloud options
+WIDTH = 2000
+HEIGHT = 1000
+MIN_WORD_LENGTH = 4
+
 # keys
 ACTOR = 'actor'
 AUDIO_FILES = 'audio_files'
@@ -47,9 +52,3 @@ PLURAL_DATA = set([
     PHOTOS,
     VIDEOS
 ])
-
-
-# wordcloud
-WIDTH = 2000
-HEIGHT = 1000
-MIN_WORD_LENGTH = 6

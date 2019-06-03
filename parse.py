@@ -38,9 +38,11 @@ def buildContent(content, participant, total):
     for word in words:
         update(word, participant)
         update(word, total)
+        participant.content.append(word)
+        total.content.append(word)
         if len(word) >= MIN_WORD_LENGTH:
-            participant.content.append(word)
-            total.content.append(word)
+            participant.filteredContent.append(word)
+            total.filteredContent.append(word)
 
 
 for row in rows[MESSAGES]:
@@ -62,11 +64,17 @@ for row in rows[MESSAGES]:
 
 if PRINT_STATS:
     pp.pprint(participants)
+    print "\nTotal number of words:"
+    for participant in participants.values():
+        print participant.name + ": " +  str(len(participant.content))
+    print "\nTotal number of words exceeding MIN_WORD_LENGTH:"
+    for participant in participants.values():
+        print participant.name + ": " +  str(len(participant.filteredContent))
 
 if GENERATE_WORDCLOUD:
     for participant in participants.values():
         print participant.name
-        content = " ".join(participant.content)
+        content = " ".join(participant.filteredContent)
         wordcloud = WordCloud(width=WIDTH, height=HEIGHT).generate(content)
         image = wordcloud.to_image()
         image.show()
