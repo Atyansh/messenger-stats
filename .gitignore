@@ -1,15 +1,19 @@
-# Project Specific
+###############################################################################
+# personal data
 audio/
 files/
 gifs/
 photos/
 videos/
-
-
 *.json
+
+# Custom python software
+msg_stats/
+word_cloud/
+
+
+# Vim stuff
 .*.swp
-
-
 ################################################################################
 
 # Byte-compiled / optimized / DLL files

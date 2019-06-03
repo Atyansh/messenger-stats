@@ -1,0 +1,13 @@
+Add stats for reactions
+ - total reactions given and received
+ - split stats by reaction type
+
+Utilize Timestamp
+ - Build weekly activity charts
+ - What times is chat most active
+ - Split by participant
+ - Custom wordclouds by times of day
+
+Wordcloud
+ - Custom coloring for Wordcloud
+ - Custom wordcloud shape, personalized to the participant
